@@ -1,5 +1,7 @@
 from flask import Flask, redirect, render_template, request
 import os
+import mysql.connector
+from mysql.connector import Error
 
 appWeb = Flask(__name__)
 
@@ -55,8 +57,20 @@ loggedUser = None
 
 @appWeb.route("/")
 def main():
-    return "ciao pippo"
+    connection = None
+    risposta = "Nessuna risposta"
+    try:
+        connection = mysql.connector.connect(
+            host="its-rizzoli-idt-mysql-53627.mysql.database.azure.com",
+            user="psqladmin",
+            passwd="H@Sh1CoR3!",
+            database="laura_db"
+        )
+        risposta = "connessione adb avvenuta con successo"
+    except Error as e:
+        risposta = f"The error '{e}' occurred"
 
+    return risposta
 @appWeb.route("/prova")
 def prova():
     return "stringa da visualizzare come prova"
