@@ -64,7 +64,7 @@ def main():
             host="its-rizzoli-idt-mysql-32945.mysql.database.azure.com",
             user="psqladmin",
             passwd="H@Sh1CoR3!",
-            database="ufs05db"
+            database="ufs05esame"
         )
         risposta = "connessione adb avvenuta con successo"
         cursor = connection.cursor()
