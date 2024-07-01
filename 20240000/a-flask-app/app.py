@@ -61,7 +61,7 @@ def main():
     risposta = "Nessuna risposta"
     try:
         connection = mysql.connector.connect(
-            host="its-rizzoli-idt-mysql-39371.mysql.database.azure.com",
+            host="its-rizzoli-idt-mysql-32945.mysql.database.azure.com",
             user="psqladmin",
             passwd="H@Sh1CoR3!",
             database="ufs05db"
