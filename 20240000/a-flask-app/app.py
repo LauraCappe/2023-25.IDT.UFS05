@@ -61,10 +61,10 @@ def main():
     risposta = "Nessuna risposta"
     try:
         connection = mysql.connector.connect(
-            host="its-rizzoli-idt-mysql-53627.mysql.database.azure.com",
+            host="its-rizzoli-idt-mysql-39371.mysql.database.azure.com",
             user="psqladmin",
             passwd="H@Sh1CoR3!",
-            database="laura_db"
+            database="ufs05db"
         )
         risposta = "connessione adb avvenuta con successo"
         cursor = connection.cursor()
